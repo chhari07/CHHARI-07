@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+.accordion {
+  max-width: 100%; /* Ensure the container adjusts dynamically */
+  background: rgba(0, 0, 0, 0.10);
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-between; /* Ensure space between items */
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  flex: 1 1 calc(33.33% - 20px); /* 3 columns on large screens (default) */
+  margin: 10px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.7s ease-in-out;
+  height: 350px; /* Set default height */
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+  border-radius: 10px; /* Add border-radius for smoother edges */
+  overflow: hidden;
+}
+
+.box:hover {
+  flex: 1;
+  height: 550px; /* Expanded size on hover */
+}
+
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  opacity: 0;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.8); /* Neon effect */
+}
+
+.box:hover .text {
+  opacity: 1;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 40px auto 20px auto;
+  font-family: 'Fjalla One', sans-serif;
+  color: #fff;
+  font-size: 36px; /* Adjust title size */
+}
+
+/* Mobile View Fix (max-width: 800px) */
+@media screen and (max-width: 800px) {
+  .accordion {
+    flex-direction: column; /* Stack the boxes vertically */
+    justify-content: center;
+  }
+
+  .box {
+    height: 250px; /* Reduce height for smaller screens */
+    flex: 1 1 100%; /* Stack all boxes in a single column */
+  }
+
+  .box:hover {
+    height: 350px; /* Slightly larger hover effect */
+  }
+
+  .text {
+    font-size: 12px;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    margin: 20px auto;
+  }
+
+  .box {
+    height: 220px; /* Smaller height for very small screens */
+    flex: 1 1 100%; /* Stacking boxes */
+    margin: 10px 0; /* Adjust margins for small screens */
+  }
+
+  .box:hover {
+    height: 300px; /* Expand hover size on small screens */
+  }
+
+  .text {
+    font-size: 10px;
+    bottom: 5px;
+    left: 5px;
+  }
+}

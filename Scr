@@ -1,0 +1,33 @@
+import React from "react";
+
+const Strenght = () => {
+  return (
+    <div>
+      {/* Parallax Section 1 */}
+      <div
+        className="h-screen bg-fixed bg-center bg-cover flex items-center justify-center"
+        style={{ backgroundImage: `url('https://wallpapercave.com/uwp/uwp4672102.jpeg')` }}
+      >
+        <h1 className="text-5xl text-white font-bold bg-black bg-opacity-50 p-5 rounded">Parallax One</h1>
+      </div>
+
+      {/* Parallax Section 2 */}
+      <div
+        className="h-screen bg-fixed bg-center bg-cover flex items-center justify-center"
+        style={{ backgroundImage: `url('https://wallpapercave.com/uwp/uwp4672103.jpeg')` }}
+      >
+        <h1 className="text-5xl text-white font-bold bg-black bg-opacity-50 p-5 rounded">Parallax Two</h1>
+      </div>
+
+      {/* Parallax Section 3 */}
+      <div
+        className="h-screen bg-fixed bg-center bg-cover flex items-center justify-center"
+        style={{ backgroundImage: `url('https://wallpapercave.com/uwp/uwp4672101.jpeg')` }}
+      >
+        <h1 className="text-5xl text-white font-bold bg-black bg-opacity-50 p-5 rounded">Parallax Three</h1>
+      </div>
+    </div>
+  );
+};
+
+export default Strenght;

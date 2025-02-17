@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "user-select",
+          "text-wrap: balance",
+          "container-type",
+          "container-type: inline-size",
+          "backdrop-filter",
+          "@container",
+          "@container",
+          "@container"
+        ]
+      }
+    ]
+  }
+}
